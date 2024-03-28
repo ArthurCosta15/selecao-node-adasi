@@ -11,17 +11,17 @@ export class Activity {
   @Column({ type : 'date' })
   data: Date
 
-  @Column({ nullable: false })
-  hora_agendamento_inicio: string 
+  @Column({ type : 'time' })
+  hora_agendamento_inicial: Date
 
-  @Column({ nullable: false })
-  hora_agendamento_termino: string
+  @Column({ type : 'time' })
+  hora_agendamento_final: Date
 
-  @Column({ nullable: true })
-  hora_inicio?: string
+  @Column({ type : 'time', nullable: true })
+  hora_inicio?: Date
 
-  @Column({ nullable: true })
-  hora_termino?: string
+  @Column({ type : 'time' , nullable: true })
+  hora_termino?: Date
 
   @ManyToOne(() => Task, (task) => task.activities)
   @JoinColumn({ name: 'task_id' })
