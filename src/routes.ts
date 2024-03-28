@@ -1,9 +1,9 @@
-import { Router } from "express";
-import { CoursesController } from "./controllers/CoursesController";
-import { StudentsController } from "./controllers/StudentsController";
-import { TasksController } from "./controllers/TasksController";
+import { Router } from "express"
+import { CoursesController } from "./controllers/CoursesController"
+import { StudentsController } from "./controllers/StudentsController"
+import { TasksController } from "./controllers/TasksController"
 
-const routes = Router();
+const routes = Router()
 
 // Rotas dos Cursos
 routes.post('/courses', new CoursesController().create)

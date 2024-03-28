@@ -1,16 +1,16 @@
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
-import { Student } from './students';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm'
+import { Student } from './students'
 
 @Entity()
 export class Course {
   @PrimaryGeneratedColumn('uuid')
-  id: string;
+  id: string
 
   @Column()
-  name: string;
+  name: string
 
   @OneToMany(() => Student, (student) => student.course, {
     onDelete: 'CASCADE',
   })
-  students: Student[];
+  students: Student[]
 }

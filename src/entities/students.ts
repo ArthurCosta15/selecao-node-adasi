@@ -1,18 +1,19 @@
-import { Column, Entity, JoinColumn, ManyToOne } from 'typeorm';
-import { Course } from './courses';
+import { Column, Entity, JoinColumn, ManyToOne } from 'typeorm'
+import { Course } from './courses'
 
 @Entity()
 export class Student {
   @Column({ unique: true, primary: true })
-  cpf: string;
+  cpf: string
 
   @Column()
-  name: string;
+  name: string
 
   @Column({ unique: true })
-  matrícula: string;
+  matrícula: string
 
   @ManyToOne(() => Course, (course) => course.students)
   @JoinColumn({ name: 'course_id' })
-  course: Course;
+  course: Course
+  activities: any
 }

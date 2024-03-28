@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-import { CoursesRepositories } from "../repositories/CoursesRepositories";
+import { Request, Response } from "express"
+import { CoursesRepositories } from "../repositories/CoursesRepositories"
 
 export class CoursesController {
     async create(req: Request, res: Response) {
