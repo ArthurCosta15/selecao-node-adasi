@@ -9,8 +9,17 @@ export class StudentsController {
         }
 
         try {
+            const existingStudent = await StudentsRepositories.findOneBy({ cpf: cpf })
+            if (existingStudent) {
+                return res.status(400).json({ message: 'Já existe um estudante com este CPF' })
+            }
+
+            const existingMatricula = await StudentsRepositories.findOneBy({ matrícula: matrícula })
+            if (existingMatricula) {
+                return res.status(400).json({ message: 'Já existe um estudante com esta matricula' })
+            }
+
             const newStudent = StudentsRepositories.create({ cpf, name, matrícula })
-            console.log('New student created:', newStudent)
 
             await StudentsRepositories.save(newStudent)
 
