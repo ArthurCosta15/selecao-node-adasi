@@ -1,5 +1,5 @@
 import express from 'express'
-import { AppDataSource } from './datasource'
+import { AppDataSource } from './data-source'
 
 
 AppDataSource.initialize().then(async () => {
