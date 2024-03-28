@@ -1,0 +1,26 @@
+{
+  "name": "selecao-node-adasi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ArthurCosta15/selecao-node-adasi.git",
+  "author": "ArthurCosta15 <arthurcesar252@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --exec ts-node ./src/index.ts"
+    
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.30",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "pg": "^8.11.3",
+    "reflect-metadata": "^0.2.1",
+    "typeorm": "^0.3.20"
+  }
+}
